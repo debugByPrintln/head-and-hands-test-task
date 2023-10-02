@@ -9,7 +9,8 @@ public class Damage {
 
     public Damage(int minDamage, int maxDamage) {
         if (minDamage > maxDamage){
-            throw new IllegalArgumentException("Max damage must be greater than min damage.");
+            this.minDamage = maxDamage;
+            this.maxDamage = minDamage;
         }
         else {
             this.minDamage = minDamage;
