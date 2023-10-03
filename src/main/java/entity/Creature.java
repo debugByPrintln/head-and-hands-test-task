@@ -76,7 +76,12 @@ public abstract class Creature {
     }
 
     public void setCurrentHealth(int value){
-        this.currentHealth = value;
+        if (value > this.maxHealth){
+            this.currentHealth = this.maxHealth;
+        }
+        else{
+            this.currentHealth = value;
+        }
     }
 
     public int getAttack() {
